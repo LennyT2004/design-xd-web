@@ -1,0 +1,59 @@
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--couleur-main-gris-f);
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+/* Permet de garder 2 aarticles de test par rangée */
+.articles-test {
+  display: flex;
+  flex-wrap: wrap;
+}
+.test {
+  display: flex;
+  width: 50%;
+  margin-bottom: 3rem;
+}
+.test .image-test {
+  width: 100%;
+  max-width: 16rem;
+  height: 100%;
+  max-height: 9rem;
+  margin-right: 1rem;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.25s;
+  border-radius: 10px;
+}
+/* Remise des couleurs sur les images des articles de test lors d'un hover */
+.test:hover .image-test {
+  filter: grayscale(0%);
+}
+
+.texte-test p {
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s;
+}
+/* Changement de couleur en bleu des textes des articles de test lors d'un hover */
+.test:hover .texte-test p {
+  color: var(--couleur-main-blue);
+}
+/* Le titre des articles est plus gros et plus foncé */
+.texte-test p:nth-of-type(1) {
+  color: var(--couleur-main-gris-f);
+  font-size: 1.25rem;
+}
+/* La date des articles de l'accueil est plus petit et plus pâle */
+.texte-test p:nth-of-type(2) {
+  color: var(--couleur-main-gris-p);
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  /* En mobile, on va à un article par rangée */
+  .test {
+    width: 100%;
+  }
+}

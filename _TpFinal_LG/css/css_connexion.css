@@ -1,0 +1,156 @@
+/* //////////////////////////////////// SELECTEUR GÉNÉRAL //////////////////////////////////// */
+/* ........................................................................................... */
+
+/* Ne s'applique pas sur ce fichier car tout est écrit dans le css_accueil */
+
+/* //////////////////////////////////// Classes //////////////////////////////////// */
+
+.pourinscri-fond-f {
+  background: linear-gradient(
+    rgba(230, 100, 100, 0) 30%,
+    var(--couleur-sec-jaune)
+  );
+}
+
+.pourconnex-fond-f {
+  background: linear-gradient(
+    rgba(230, 100, 100, 0) 30%,
+    var(--couleur-sec-blue)
+  );
+}
+
+.blocconnexion {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--couleur-main-white);
+  margin: 5% 15% 5% 15%;
+  padding: 5% 10% 5% 10%;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.cubes-fond {
+  opacity: 40%;
+  filter: blur(0.8rem) brightness(1.1);
+}
+
+.inscriptionbloc {
+  color: var(--couleur-main-jaune);
+  margin: 0;
+  font-size: larger;
+}
+
+.inscriptionbloc:hover {
+  color: var(--couleur-sec-jaune);
+}
+
+/* À modifier -des éléments ont été retiré */
+/* CE CSS A ÉTÉ MODIFIÉ ET EST INSPIRÉ DE CODE VENANT SCOTT ZIRKEL */
+/* https://codepen.io/scottzirkel/pen/yNxNME */
+.hr-text {
+  position: relative;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+
+  /* Ceci est l'élément servant à bien aligner la ligne */
+
+  &:before {
+    content: "";
+    background: linear-gradient(to right, #8180781d, #818078, #8180781d);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+
+  /* Ceci est l'élément permettant un controle sur le texte, car sinon
+     le texte apparait en arrière plan, sans la couleur et le background-
+     color, il est barré, le padding pour avoir de l'espace avec la ligne... */
+
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    color: #65645e;
+    background-color: var(--couleur-main-white);
+  }
+}
+
+/* //////////////////////////////////// Balises //////////////////////////////////// */
+
+label {
+  color: var(--couleur-main-gris-f);
+}
+
+h1 {
+  text-align: center;
+  color: var(--couleur-main-gris-f);
+}
+
+input {
+  margin-bottom: 5%;
+  height: 2.5rem;
+  border: 1px solid var(--couleur-main-gris-p);
+  border-radius: 10px;
+}
+
+#connexionbouton {
+  border: none;
+  background-color: var(--couleur-sec-blue);
+  color: var(--couleur-main-white);
+  padding: 3% 5%;
+  border-radius: 50px;
+  height: initial;
+}
+
+.cnxgene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  border: 1px solid var(--couleur-main-gris-p);
+  padding: 2%;
+}
+
+.cnxgene p {
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  color: var(--couleur-sec-blue);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.cnxlogo {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  margin-right: auto;
+}
+
+.cnxgoogle {
+  margin: 5% 0px 5% 0px;
+}
+
+#connexionbouton:hover {
+  background-color: var(--couleur-tri-blue);
+}
+
+/* //////////////////////////////////// VERSION WEB //////////////////////////////////// */
+
+@media screen and (max-width: 912px) {
+  .blocconnexion {
+    margin: 5% 0px 5% 0px;
+    padding: 5% 10% 10% 10%;
+  }
+
+  input {
+    height: 2rem;
+  }
+}

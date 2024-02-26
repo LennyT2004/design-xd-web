@@ -1,0 +1,24 @@
+:root {
+  /* Les bleus */
+  --couleur-main-blue: #03ceff;
+  --couleur-sec-blue: #07a6d0;
+  --couleur-tri-blue: #028fb3;
+  --couleur-qua-blue: #017390;
+  --couleur-qui-blue: #005a70;
+
+  /* Les jaunes */
+  --couleur-main-jaune: #ffbf00;
+  --couleur-sec-jaune: #ce9a00;
+
+  /* Les neutres */
+  --couleur-main-white: #fafafa;
+  --couleur-main-gris-p: #b4b2ab;
+  --couleur-main-gris-f: #707070;
+
+  /* Plus foncé */
+  --couleur-foot-gris-f: #2b2c2c;
+}
+
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+}
